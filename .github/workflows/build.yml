@@ -1,0 +1,27 @@
+name: Build Swift Project
+
+on:
+  push:
+    branches:
+      - master
+  pull_request:
+    branches:
+      - master
+
+jobs:
+  build:
+    runs-on: windows-latest
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Set up MSBuild path
+      uses: microsoft/setup-msbuild@v1.0.2
+    - name: Restore NuGet packages
+      run: msbuild -t:restore Swift.sln
+    - name: Build solution
+      run: msbuild -p:Configuration=Release -p:Platform="Any CPU" Swift.sln
+    - name: Upload artifact
+      uses: actions/upload-artifact@v2
+      with:
+        name: SwiftExecutable
+        path: Swift/bin/Release/*.exe
