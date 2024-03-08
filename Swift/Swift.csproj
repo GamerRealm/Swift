@@ -165,7 +165,7 @@
       <HintPath>..\packages\lioncs.ColorSlider.1.0.0\lib\net452\ColorSlider.dll</HintPath>
     </Reference>
     <Reference Include="Guna.UI2">
-      <HintPath>..\..\GunaUI-Key\Crack\Guna.UI2.dll</HintPath>
+      <HintPath>..\libs\Guna.UI2.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
